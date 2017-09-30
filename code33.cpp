@@ -26,19 +26,19 @@ public:
         
         std::vector<int> v;
 
-        for (int i = 0, j = 0; i < nums1_size && j < nums2_size;) {
-            if (nums1[i] == nums2[j]) {
-            	v.push_back(nums1[i]);
-            	i++;
-            	j++;
-            }
-            else if (nums1[i] < nums2[j]) {
-            	i++;
-            }
-            else {
-            	j++;
-            }
-        }
+		for (int i = 0, j = 0; i < nums1_size && j < nums2_size;) {
+		    if (nums1[i] == nums2[j]) {
+		    	v.push_back(nums1[i]);
+		    	i++;
+		    	j++;
+		    }
+		    else if (nums1[i] < nums2[j]) {
+		    	i++;
+		    }
+		    else {
+		    	j++;
+		    }
+		}
 
         return v;
     }
