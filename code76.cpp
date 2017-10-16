@@ -12,35 +12,35 @@ The brackets must close in the correct order, "()" and "()[]{}" are all valid bu
 */
 class Solution {
 public:
-    bool isValid(string s) {
-        int n = s.size();
+	bool isValid(string s) {
+	    int n = s.size();
 
-        if ((n % 2) == 1) {
-        	return false;
-        }
+	    if ((n % 2) == 1) {
+	    	return false;
+	    }
 
-        stack<char> stk;
+	    stack<char> stk;
 
-        for (int i = 0; i < n; i++) {
-        	if (!stk.empty()) {
-                if ((stk.top() == '(' && s[i] == ')') || (stk.top() == '[' && s[i] == ']') || (stk.top() == '{' && s[i] == '}')) {
-                	stk.pop();
-                }
-                else {
-                	stk.push(s[i]);
-                }
-        	}
-        	else {
-        		stk.push(s[i]);
-        	}
+	    for (int i = 0; i < n; i++) {
+	    	if (!stk.empty()) {
+	            if ((stk.top() == '(' && s[i] == ')') || (stk.top() == '[' && s[i] == ']') || (stk.top() == '{' && s[i] == '}')) {
+	            	stk.pop();
+	            }
+	            else {
+	            	stk.push(s[i]);
+	            }
+	    	}
+	    	else {
+	    		stk.push(s[i]);
+	    	}
 
-        }
+	    }
 
-        if (stk.empty()) {
-        	return true;
-        }
-        else {
-        	return false;
-        }
-    }
+	    if (stk.empty()) {
+	    	return true;
+	    }
+	    else {
+	    	return false;
+	    }
+	}
 };
