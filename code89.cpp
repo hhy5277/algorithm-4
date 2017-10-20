@@ -14,7 +14,7 @@ There are many calls to sumRange function.
 */
 class NumArray {
 public:
-    NumArray(vector<int> &nums) {
+    NumArray(vector<int> nums) {
         num.push_back(0);
 
         for (int i = 1; i <= nums.size(); i++) {
