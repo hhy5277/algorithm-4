@@ -19,7 +19,7 @@ For example:
 所以，是 n = (n - 1) / 26;
 而不是 n /= 26;
 */
-class Solution {
+class Solution { 
 public:
     string convertToTitle(int n) {
     	string s;
