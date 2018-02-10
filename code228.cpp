@@ -42,7 +42,7 @@ public:
                 else if(j == 0)
                     table[i][j] = ( table[i-1][j] && s1[i-1] == s3[i+j-1]);
                 else
-                    table[i][j] = (table[i-1][j] && s1[i-1] == s3[i+j-1] ) || (table[i][j-1] && s2[j-1] == s3[i+j-1] );
+                    table[i][j] = (table[i-1][j] && s1[i-1] == s3[i+j-1] ) || (table[i][j-1] && s2[j-1] == s3[i+j-1] ); // 我不管是取s1还是s2的字符，我只要知道到目前为止，动态字符串s3可以被动态字符串s1和s2交替拼接出来。
             }
 
         return table[s1.length()][s2.length()];
